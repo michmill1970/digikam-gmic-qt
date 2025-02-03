@@ -431,13 +431,13 @@ void FiltersView::onCustomContextMenu(const QPoint & point)
   }
   onItemClicked(index);
   if (item->isFave()) {
-    _faveContextMenu->deleteLater();
     _faveContextMenu = itemContextMenu(MenuType::Fave, item);
     _faveContextMenu->exec(ui->treeView->mapToGlobal(point));
+    _faveContextMenu->deleteLater();
   } else {
-    _filterContextMenu->deleteLater();
     _filterContextMenu = itemContextMenu(MenuType::Filter, item);
     _filterContextMenu->exec(ui->treeView->mapToGlobal(point));
+    _filterContextMenu->deleteLater();
   }
 }
 

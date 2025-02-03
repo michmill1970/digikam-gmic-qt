@@ -39,7 +39,11 @@ Note: desired release tag must be the same for CImg, G'MIC, and C'MIC-Qt.
 
     patch -p1 < ./src/patches/07_digikam_macos_target.patch
 
-14/ Check if new files need to be appended with "git status". Add files to git repository if necessary.
-15/ Update all .qm files in src/translations.
-16/ Check compilation with "digikam" host.
+14/ Patch gmicqt/ codes to fix crash when filters tree-view context menu is actived:
+
+    patch -p1 < ./src/patches/08_digikam_fix_crash_495810.patch
+
+15/ Check if new files need to be appended with "git status". Add files to git repository if necessary.
+16/ Update all .qm files in src/translations.
+17/ Check compilation with "digikam" host.
 

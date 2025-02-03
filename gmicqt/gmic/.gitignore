@@ -1,0 +1,7 @@
+*.a
+*.o
+*.so
+src/gmic_stdlib.h
+src/gmic
+src/use_libgmic
+src/use_libcgmic

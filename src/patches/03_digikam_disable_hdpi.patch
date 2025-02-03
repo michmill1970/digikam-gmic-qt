@@ -1,0 +1,41 @@
+diff --git a/gmicqt/src/DialogSettings.cpp b/gmicqt/src/DialogSettings.cpp
+index 206a6a4..bf6b5cb 100644
+--- a/gmicqt/src/DialogSettings.cpp
++++ b/gmicqt/src/DialogSettings.cpp
+@@ -114,6 +114,7 @@ DialogSettings::DialogSettings(QWidget * parent) : QDialog(parent), ui(new Ui::D
+   connect(ui->outputMessages, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &DialogSettings::onOutputMessageModeChanged);
+   connect(ui->cbNotifyFailedUpdate, &QCheckBox::toggled, this, &DialogSettings::onNotifyStartupUpdateFailedToggle);
+ 
++#ifndef _GMIC_QT_DISABLE_HDPI_
+ #if QT_VERSION_GTE(6, 0, 0)
+   ui->cbHighDPI->hide();
+   ui->labelHighDPI->hide();
+@@ -121,6 +122,10 @@ DialogSettings::DialogSettings(QWidget * parent) : QDialog(parent), ui(new Ui::D
+   ui->cbHighDPI->setChecked(Settings::highDPIEnabled());
+   connect(ui->cbHighDPI, &QCheckBox::toggled, this, &DialogSettings::onHighDPIToggled);
+ #endif
++#else
++  ui->cbHighDPI->hide();
++  ui->labelHighDPI->hide();
++#endif
+ 
+   ui->languageSelector->selectLanguage(Settings::languageCode());
+   ui->languageSelector->enableFilterTranslation(Settings::filterTranslationEnabled());
+diff --git a/gmicqt/src/GmicQt.cpp b/gmicqt/src/GmicQt.cpp
+index 3af90b3..b47c299 100644
+--- a/gmicqt/src/GmicQt.cpp
++++ b/gmicqt/src/GmicQt.cpp
+@@ -549,11 +549,13 @@ void configureApplication()
+   QCoreApplication::setOrganizationDomain(GMIC_QT_ORGANISATION_DOMAIN);
+   QCoreApplication::setApplicationName(GMIC_QT_APPLICATION_NAME);
+   QCoreApplication::setAttribute(Qt::AA_DontUseNativeMenuBar);
++#ifndef _GMIC_QT_DISABLE_HDPI_
+ #if !QT_VERSION_GTE(6, 0, 0)
+   if (QSettings().value(HIGHDPI_KEY, false).toBool()) {
+     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+   }
+ #endif
++#endif
+ }
+ 
+ void disableModes(const std::list<GmicQt::InputMode> & disabledInputModes, //

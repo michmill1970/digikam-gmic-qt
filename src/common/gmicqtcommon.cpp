@@ -118,12 +118,12 @@ QList<DPluginAuthor> s_gmicQtPluginAuthors()
                              QObject::tr("Port to digiKam and maintainer"))
             << DPluginAuthor(QString::fromUtf8("Sébastien Fourey"),
                              QString::fromUtf8("Sebastien dot Fourey at ensicaen dot fr"),
-                             QString::fromUtf8("(C) 2017-2025"),
-                             QObject::tr("Original G'MIC-qt plugin"))
+                             QString::fromUtf8("(C) 2017-2024"),
+                             QObject::tr("Prior original G'MIC-qt plugin maintainer"))
             << DPluginAuthor(QString::fromUtf8("David Tschumperlé"),
                              QString::fromUtf8("David dot Tschumperle at ensicaen dot fr"),
                              QString::fromUtf8("(C) 2008-2025"),
-                             QObject::tr("G'MIC core"))
+                             QObject::tr("G'MIC core and new G'MIC-Qt maintainer"))
             ;
 }
 

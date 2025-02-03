@@ -4,7 +4,7 @@ Note: desired release tag must be the same for CImg, G'MIC, and C'MIC-Qt.
 
 1/  Checkout CImg at the desired release tag (https://github.com/GreycLab/CImg.git).
 2/  Checkout G'MIC at the desired release tag (https://github.com/GreycLab/gmic).
-3/  Checkout G'MIC-Qt at the same desired release tag (https://github.com/c-koi/gmic-qt).
+3/  Checkout G'MIC-Qt at the same desired release tag (https://github.com/GreycLab/gmic-qt).
 4/  Fix dependencies to complete the configuration of G'MIC-Qt source code.
     Use the bootstrap-none script to configure G'MIC-Qt directory with the "none" host.
     Note: The G'MIC-Qt/translations and G'MIC-Qt/translations/filters must be build before.
@@ -27,15 +27,19 @@ Note: desired release tag must be the same for CImg, G'MIC, and C'MIC-Qt.
 
     patch -p1 < ./src/patches/04_digikam_disable_logo.patch
 
-11/ Patch gmicqt/ codes to improve plugin integration
+11/ Patch gmicqt/ codes to improve plugin integration:
 
     patch -p1 < ./src/patches/05_digikam_plugin_integration.patch
 
-12/ Patch gmicqt/ codes to fix crash when Cancel button is pressed while computing.
+12/ Patch gmicqt/ codes to fix crash when Cancel button is pressed while computing:
 
     patch -p1 < ./src/patches/06_digikam_fix_cancel_crash.patch
 
-13/ Check if new files need to be appended with "git status". Add files to git repository if necessary.
-14/ Update all .qm files in src/translations.
-15/ Check compilation with "digikam" host.
+13/ Patch gmicqt/ codes to fix macOS targets:
+
+    patch -p1 < ./src/patches/07_digikam_macos_target.patch
+
+14/ Check if new files need to be appended with "git status". Add files to git repository if necessary.
+15/ Update all .qm files in src/translations.
+16/ Check compilation with "digikam" host.
 

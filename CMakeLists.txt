@@ -10,6 +10,8 @@ project(gmicqt-digiKam)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/gmicqt/cmake/modules C:/vcpkg/scripts/cmake ${CMAKE_MODULE_PATH})
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+set(CMAKE_PREFIX_PATH C:/vcpkg/installed/x64-windows)
+set(CMAKE_VERBOSE_MAKEFILE ON)
 
 message("PREFIX_ext_gmic: ${PREFIX_ext_gmic}")
 message("GmicQt_Conf: ${GmicQt_Conf}")

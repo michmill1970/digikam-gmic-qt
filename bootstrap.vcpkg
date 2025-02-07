@@ -20,7 +20,7 @@ INSTALL_DIR=$1
 
 if [[ $INSTALL_DIR == "" ]]; then
 
-    INSTALL_DIR="/e/dk/"
+    INSTALL_DIR="/d/dk/"
 
 fi
 

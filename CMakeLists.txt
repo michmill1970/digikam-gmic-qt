@@ -8,10 +8,11 @@ cmake_minimum_required(VERSION 3.10.0 FATAL_ERROR)
 
 project(gmicqt-digiKam)
 
-set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/gmicqt/cmake/modules C:/vcpkg/scripts/cmake ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/gmicqt/cmake/modules /c/vcpkg/scripts/cmake ${CMAKE_MODULE_PATH})
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 set(CMAKE_PREFIX_PATH C:/vcpkg/installed/x64-windows)
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(INSTALL_ROOT /d/dk)
 
 message("PREFIX_ext_gmic: ${PREFIX_ext_gmic}")
 message("GmicQt_Conf: ${GmicQt_Conf}")

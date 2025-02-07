@@ -37,7 +37,6 @@ echo "Installing to $INSTALL_DIR for target $VCPKG_TRIPLET with build mode $BUIL
 # Paths rules
 ORIG_PATH="$PATH"
 export PATH=$PATH:/c/bison:/c/icoutils/bin:$INSTALL_DIR/$VCPKG_TRIPLET/tools/gperf:$INSTALL_DIR/$VCPKG_TRIPLET/tools/python3:$INSTALL_DIR/$VCPKG_TRIPLET/bin
-echo -e "\n\n INSTALL_ROOT=$INSTALL_ROOT\n\n"
 echo -e "\n\n VCPKG_DIR=$VCPKG_DIR\n\n"
 echo -e "\n\n VCPKG_INSTALL_PREFIX=$VCPKG_INSTALL_PREFIX\n\n"
 echo -e "\n\n PATH=$PATH\n\n"

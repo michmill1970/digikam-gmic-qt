@@ -12,6 +12,7 @@
 # set(PNG_PNG_INCLUDE_DIR "/d/dk/x64-windows/include/libpng16/")
 set(CMAKE_TOOLCHAIN_FILE "c:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake")
 set(VCPKG_TARGET_TRIPLET "x64-windows")
+set(VCPKG_ROOT "c:\\vcpkg")
 set(VCPKG_VERBOSE ON)
 # set(CMAKE_TOOLCHAIN_FILE $env{CMAKE_TOOLCHAIN_FILE})
 

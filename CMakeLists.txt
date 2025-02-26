@@ -6,9 +6,10 @@
 
 # mm added
 set(ZLIB_LIBRARY "/d/dk/x64-windows/lib/")
-set(ZLIB_INCLUDE_DIR "/d/dk/x64-windows/include")
+set(ZLIB_INCLUDE_DIR "/d/dk/x64-windows/include/")
+set(ZLIB_ZLIB_INCLUDE_DIR "/d/dk/x64-windows/include/")
 set(PNG_LIBRARY "/d/dk/x64-windows/lib/")
-set(PNG_PNG_INCLUDE_DIR "/d/dk/x64-windows/include/libpng16")
+set(PNG_PNG_INCLUDE_DIR "/d/dk/x64-windows/include/libpng16/")
 
 cmake_minimum_required(VERSION 3.10.0 FATAL_ERROR)
 

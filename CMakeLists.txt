@@ -14,7 +14,7 @@ set(CMAKE_TOOLCHAIN_FILE "c:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake")
 set(VCPKG_TARGET_TRIPLET "x64-windows")
 set(VCPKG_ROOT "c:\\vcpkg")
 set(INSTALL_ROOT "E:\\dk")
-set(VCPKG_VERBOSE ON)
+# set(VCPKG_VERBOSE ON)
 set(CMAKE_FIND_DEBUG_MODE TRUE)
 # set(CMAKE_TOOLCHAIN_FILE $env{CMAKE_TOOLCHAIN_FILE})
 

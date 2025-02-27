@@ -15,6 +15,7 @@ set(VCPKG_TARGET_TRIPLET "x64-windows")
 set(VCPKG_ROOT "c:\\vcpkg")
 set(INSTALL_ROOT "E:\\dk")
 set(VCPKG_VERBOSE ON)
+set(CMAKE_FIND_DEBUG_MODE TRUE)
 # set(CMAKE_TOOLCHAIN_FILE $env{CMAKE_TOOLCHAIN_FILE})
 
 cmake_minimum_required(VERSION 3.10.0 FATAL_ERROR)

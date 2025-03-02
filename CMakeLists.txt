@@ -20,6 +20,8 @@ set(CMAKE_FIND_DEBUG_MODE TRUE)
 
 cmake_minimum_required(VERSION 3.10.0 FATAL_ERROR)
 
+find_package(zlib)
+
 project(gmicqt-digiKam)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/gmicqt/cmake/modules ${CMAKE_MODULE_PATH})

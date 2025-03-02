@@ -25,6 +25,11 @@ project(gmicqt-digiKam)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/gmicqt/cmake/modules ${CMAKE_MODULE_PATH})
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-include_directories(${CMAKE_SOURCE_DIR}/gmicqt/src)
+include_directories(${CMAKE_SOURCE_DIR}/gmicqt/src
+                    ${CMAKE_CURRENT_BINARY_DIR}
+                    ${CMAKE_CURRENT_SOURCE_DIR}
+                    ${CMAKE_BINARY_DIR}
+                    ${CMAKE_SOURCE_DIR}
+                    )
 
 add_subdirectory(gmicqt)
